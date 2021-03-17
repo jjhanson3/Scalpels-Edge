@@ -8,7 +8,7 @@ public class itemPickUpScript : MonoBehaviour
     //might need something of this type
     //public Medicine medicineScript;
     public Rigidbody rb;
-    public BoxCollider coll;
+    public Collider coll;
     public Transform player, HandContainer, cam;
 
     [SerializeField]
@@ -51,7 +51,9 @@ public class itemPickUpScript : MonoBehaviour
                     hit.transform.parent = HandContainer.transform;
                     hit.transform.localPosition = Vector3.zero;
                     hit.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                    transform.localScale = Vector3.one;
+                    hit.transform.localScale = Vector3.one;
+                    rb = hit.rigidbody;
+                    coll = hit.collider;
                     rb.isKinematic = true;
                     coll.isTrigger = true;
 
@@ -59,7 +61,7 @@ public class itemPickUpScript : MonoBehaviour
             }
         }
 
-        if (equipped && Input.GetKeyDown("q") && transform.parent != null)
+        if (equipped && Input.GetKeyDown("q"))
         {
             print("Item has been dropped");
             equipped = false;
