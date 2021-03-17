@@ -23,6 +23,8 @@ public class itemPickUpScript : MonoBehaviour
     [SerializeField]
     private string selectableTag = "Selectable";
 
+    private Transform objTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,11 +49,10 @@ public class itemPickUpScript : MonoBehaviour
                     print("Item has been picked up");
                     equipped = true;
                     slotFull = true;
-
-                    hit.transform.parent = HandContainer.transform;
-                    hit.transform.localPosition = Vector3.zero;
-                    hit.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                    hit.transform.localScale = Vector3.one;
+                    objTransform = selection;
+                    objTransform.parent = HandContainer.transform;
+                    objTransform.localPosition = Vector3.zero;
+                    objTransform.localRotation = Quaternion.Euler(Vector3.zero);
                     rb = hit.rigidbody;
                     coll = hit.collider;
                     rb.isKinematic = true;
@@ -61,14 +62,14 @@ public class itemPickUpScript : MonoBehaviour
             }
         }
 
-        if (equipped && Input.GetKeyDown("q"))
+        if (equipped && Input.GetKeyDown("q") && objTransform.parent != null)
         {
             print("Item has been dropped");
             equipped = false;
             slotFull = false;
 
             //Set parent to null
-            transform.parent = null;
+            objTransform.parent = null;
 
             //Make Rigidbody not kinematic and BoxCollider normal
             rb.isKinematic = false;
