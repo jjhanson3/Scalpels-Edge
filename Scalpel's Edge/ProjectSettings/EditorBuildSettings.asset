@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ArmyHospital.unity
+    guid: 6978101c00ea7c84e974d2b5dd4385c1
   m_configObjects: {}
