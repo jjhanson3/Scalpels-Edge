@@ -8,7 +8,7 @@ public class itemPickUpScript : MonoBehaviour
     //might need something of this type
     //public Medicine medicineScript;
     public Rigidbody rb;
-    public BoxCollider coll;
+    public Collider coll;
     public Transform player, HandContainer, cam;
 
     [SerializeField]
@@ -22,6 +22,8 @@ public class itemPickUpScript : MonoBehaviour
     //variables needed for properly targeting
     [SerializeField]
     private string selectableTag = "Selectable";
+
+    private Transform objTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -42,75 +44,36 @@ public class itemPickUpScript : MonoBehaviour
             var selection = hit.transform;
             if (selection.CompareTag(selectableTag))
             {
-                var selectionRenderer = selection.GetComponent<Renderer>();
-                //print("Tag is correct " + selectionRenderer);
-                //if (selectionRenderer != null)
-                //{
                 if (Input.GetKeyDown("e") && !equipped && distanceToPlayer.magnitude <= pickUpRange && !slotFull)
                 {
-                    hit.transform.SetParent(HandContainer);
-                    print("Get inside of button press");
-                        hit.transform.SetParent(HandContainer);
-                        hit.transform.localPosition = Vector3.zero;
-                        hit.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                        rb.isKinematic = true;
-                        coll.isTrigger = true;
+                    print("Item has been picked up");
+                    equipped = true;
+                    slotFull = true;
+                    objTransform = selection;
+                    objTransform.parent = HandContainer.transform;
+                    objTransform.localPosition = Vector3.zero;
+                    objTransform.localRotation = Quaternion.Euler(Vector3.zero);
+                    rb = hit.rigidbody;
+                    coll = hit.collider;
+                    rb.isKinematic = true;
+                    coll.isTrigger = true;
 
-                    //PickUp();
                 }
-                //}
             }
         }
 
-        if (equipped && Input.GetKeyDown("q"))
+        if (equipped && Input.GetKeyDown("q") && objTransform.parent != null)
         {
-            Drop();
+            print("Item has been dropped");
+            equipped = false;
+            slotFull = false;
+
+            //Set parent to null
+            objTransform.parent = null;
+
+            //Make Rigidbody not kinematic and BoxCollider normal
+            rb.isKinematic = false;
+            coll.isTrigger = false;
         }
-    }
-
-    private void PickUp()
-    {
-        print("Item has been picked up");
-        equipped = true;
-        slotFull = true;
-
-        //Make weapon a child of the camera and move it to default position
-        transform.SetParent(HandContainer);
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.Euler(Vector3.zero);
-        transform.localScale = Vector3.one;
-
-
-        //Make Rigidbody kinematic and BoxCollider a trigger
-        rb.isKinematic = true;
-        coll.isTrigger = true;
-
-        //Enable script
-        //medicineScript.enabled = true;
-
-    }
-
-    private void Drop()
-    {
-        print("Item has been dropped");
-        equipped = false;
-        slotFull = false;
-
-        //Set parent to null
-        transform.SetParent(null);
-
-        //Make Rigidbody not kinematic and BoxCollider normal
-        rb.isKinematic = false;
-        coll.isTrigger = false;
-
-        //Gun carries momentum of player
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
-
-        //Add force
-        rb.AddForce((Vector3.one + cam.forward) * dropForwardForce, ForceMode.Impulse);
-        rb.AddForce((Vector3.one + cam.up) * dropUpwardForce, ForceMode.Impulse);
-
-        //Disable script
-        //medicineScript.enabled = false;
     }
 }
