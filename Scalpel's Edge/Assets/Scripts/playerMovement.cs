@@ -12,12 +12,15 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Check for camera lock first
+        if (!gameObject.GetComponentInChildren<cameraMovement>().locked)
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float z = Input.GetAxisRaw("Vertical");
 
-        float x = Input.GetAxisRaw("Horizontal");
-        float z = Input.GetAxisRaw("Vertical");
+            Vector3 move = transform.right * x + transform.forward * z;
 
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(move * speed * Time.deltaTime);
+            controller.Move(move * speed * Time.deltaTime);
+        }
     }
 }
