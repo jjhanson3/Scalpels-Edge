@@ -33,10 +33,10 @@ public class HUDChartHiderScript : MonoBehaviour
     }
 
     // OnDisable is called when deactivated or disabled
-    private void OnDisable()
-    {
+    //private void OnDisable()
+    //{
         //reset the data so any chart data could be applied
-        TMPro.TextMeshProUGUI textMesh = textObject.GetComponent<TMPro.TextMeshProUGUI>();
-        textMesh.SetText(defaultText);
-    }
+        //TMPro.TextMeshProUGUI textMesh = textObject.GetComponent<TMPro.TextMeshProUGUI>();
+        //textMesh.SetText(defaultText);
+    //}
 }
