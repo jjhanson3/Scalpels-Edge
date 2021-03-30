@@ -17,12 +17,7 @@ public class HUDChartSelectMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //as update is only run while active, this will only deactivate
-        if (Input.GetKeyDown("p"))
-        {
-            //Deactivate object
-            gameObject.SetActive(false);
-        }
+        //Menu toggle handled by the canvas
     }
 
     // Called when disabled or deactivated
