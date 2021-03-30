@@ -22,5 +22,10 @@ public class playerMovement : MonoBehaviour
 
             controller.Move(move * speed * Time.deltaTime);
         }
+        else
+        {
+            //Hacky fix to stop the player from falling though the floor on disable
+            controller.Move(Vector3.zero);
+        }
     }
 }
