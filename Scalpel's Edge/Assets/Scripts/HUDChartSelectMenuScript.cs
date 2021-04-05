@@ -7,6 +7,8 @@ public class HUDChartSelectMenuScript : MonoBehaviour
     //camera to modify control status
     public GameObject cameraControl;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +27,13 @@ public class HUDChartSelectMenuScript : MonoBehaviour
     {
         //enable camera control, and by extension, player movement
         cameraControl.GetComponent<cameraMovement>().locked = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnEnable()
     {
         //disable camera control, and by extension, player movement
         cameraControl.GetComponent<cameraMovement>().locked = true;
+        cameraControl.GetComponent<cameraMovement>().freeCursor();
     }
 }
