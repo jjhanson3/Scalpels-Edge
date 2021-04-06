@@ -6,6 +6,9 @@ public class cameraMovement : MonoBehaviour
 {
     public float mouseSensitivity = 150f;
 
+    //boolean to allow diabled controls on menu
+    public bool locked = false;
+
     [SerializeField]
     public Transform playerBody;
 
@@ -17,17 +20,27 @@ public class cameraMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    public void freeCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        //Get Mouse Coordinates
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        //check for camera lock
+        if (!locked)
+        {
+            //Get Mouse Coordinates
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        yRotation -= mouseY;
-        yRotation = Mathf.Clamp(yRotation, -90f, 90f);
+            yRotation -= mouseY;
+            yRotation = Mathf.Clamp(yRotation, -90f, 90f);
 
-        transform.localRotation = Quaternion.Euler(yRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+            transform.localRotation = Quaternion.Euler(yRotation, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX);
+        }
     }
 }
