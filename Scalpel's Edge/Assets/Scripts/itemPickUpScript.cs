@@ -11,6 +11,9 @@ public class itemPickUpScript : MonoBehaviour
     public Collider coll;
     public Transform player, HandContainer, cam;
 
+    public Treatment item;
+    public string itemID;
+
     [SerializeField]
     private float pickUpRange;
 
@@ -50,6 +53,7 @@ public class itemPickUpScript : MonoBehaviour
                     equipped = true;
                     slotFull = true;
                     objTransform = selection;
+                    HandContainer.position += Vector3.down * 0.5f;
                     objTransform.parent = HandContainer.transform;
                     objTransform.localPosition = Vector3.zero;
                     objTransform.localRotation = Quaternion.Euler(Vector3.zero);
@@ -57,7 +61,9 @@ public class itemPickUpScript : MonoBehaviour
                     coll = hit.collider;
                     rb.isKinematic = true;
                     coll.isTrigger = true;
-
+                    item = gameObject.GetComponent<Treatment>();
+                    itemID = item.getTreatment();
+                    //print(itemID);
                 }
             }
         }
@@ -74,6 +80,9 @@ public class itemPickUpScript : MonoBehaviour
             //Make Rigidbody not kinematic and BoxCollider normal
             rb.isKinematic = false;
             coll.isTrigger = false;
+
+            //Set held object ID to null
+            itemID = null;
         }
     }
 }
