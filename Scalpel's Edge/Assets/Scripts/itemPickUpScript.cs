@@ -11,7 +11,8 @@ public class itemPickUpScript : MonoBehaviour
     public Collider coll;
     public Transform player, HandContainer, cam;
 
-    public Treatment item;
+    public GameObject item;
+    public Treatment itemTreatment;
     public string itemID;
 
     [SerializeField]
@@ -24,16 +25,17 @@ public class itemPickUpScript : MonoBehaviour
 
     //variables needed for properly targeting
     [SerializeField]
-    private string selectableTag = "Selectable";
+    //private string selectableTag = "Selectable";
 
     private Transform objTransform;
 
     // Start is called before the first frame update
     void Start()
     {
+        HandContainer.position = HandContainer.position + Vector3.down * 0.5f;
         //medicineScript.enabled = false;
-        rb.isKinematic = false;
-        coll.isTrigger = false;
+        //rb.isKinematic = false;
+        //coll.isTrigger = false;
     }
 
     // Update is called once per frame
@@ -45,7 +47,7 @@ public class itemPickUpScript : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             var selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
+            if (selection.CompareTag("Antibiotics") || selection.CompareTag("Burn Creams") || selection.CompareTag("Bandages"))
             {
                 if (Input.GetKeyDown("e") && !equipped && distanceToPlayer.magnitude <= pickUpRange && !slotFull)
                 {
@@ -53,7 +55,8 @@ public class itemPickUpScript : MonoBehaviour
                     equipped = true;
                     slotFull = true;
                     objTransform = selection;
-                    HandContainer.position += Vector3.down * 0.5f;
+                    //HandContainer.position = HandContainer.position + Vector3.down * 0.5f;
+                    //print(HandContainer.position);
                     objTransform.parent = HandContainer.transform;
                     objTransform.localPosition = Vector3.zero;
                     objTransform.localRotation = Quaternion.Euler(Vector3.zero);
@@ -61,8 +64,8 @@ public class itemPickUpScript : MonoBehaviour
                     coll = hit.collider;
                     rb.isKinematic = true;
                     coll.isTrigger = true;
-                    item = gameObject.GetComponent<Treatment>();
-                    itemID = item.getTreatment();
+                    itemTreatment = objTransform.GetComponent<Treatment>();
+                    itemID = itemTreatment.getTreatment();
                     //print(itemID);
                 }
             }

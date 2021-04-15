@@ -38,10 +38,5 @@ public class Wound : MonoBehaviour
 
         return woundType;
     }
-
-    public void treat()
-    {
-        gameObject.SetActive(false);
-    }
 }
 
