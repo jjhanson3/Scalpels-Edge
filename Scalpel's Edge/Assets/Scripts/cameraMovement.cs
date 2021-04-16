@@ -26,6 +26,20 @@ public class cameraMovement : MonoBehaviour
 
     }
 
+    public void unFreeCursor() {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void lockMovementAndCamera()
+    {
+        locked=true;
+    }
+
+    public void unlockMovementAndCamera()
+    {
+        locked=false;
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 97f137d16120a1c4babf420fea7ded5f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Patient-Start-0
+  - Patient-Start-1
+  - Patient-Start-2
+  - Patient-Start-3
+  - Patient-Injury-4
+  - Patient-Injury-5
+  - Patient-Injury-6
+  - Patient-Condition-7
+  - Patient-Condition-8
+  - Patient-Condition-9
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

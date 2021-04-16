@@ -1,0 +1,42 @@
+title: Start
+tags: 
+colorID: 0
+position: 430,331
+---
+Patient: Hello doc.
+
+[[Talk me through what happened.|Injury]]
+
+[[How are you feeling? |Condition]]
+
+[[I'll be right back. |Exit]]
+===
+title: Injury
+tags: 
+colorID: 0
+position: 550,111
+---
+Patient: Not much to tell, really. My rifle malfunctioned during a patrol and a piece of it hit me in the face.
+
+[[How are you feeling? |Condition]]
+
+[[I'll check in with you later |Exit]]
+===
+title: Condition
+tags: 
+colorID: 0
+position: 770,111
+---
+Patient: I'm alright. It's nothing too serious. Can I leave yet?
+
+[[Tell me about your injury first. |Injury]]
+
+[[Not yet. I'll check in with you soon. |Exit]]
+===
+title: Exit
+tags: 
+colorID: 0
+position: 890,-109
+---
+<<stop>>
+===
