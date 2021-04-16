@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
   - Patient-Start-0
   - Patient-Start-1
@@ -20,8 +20,10 @@ ScriptedImporter:
   - Patient-Condition-7
   - Patient-Condition-8
   - Patient-Condition-9
+  - Patient-Exit-10
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 97f137d16120a1c4babf420fea7ded5f,
+    type: 3}
   localizations: []
