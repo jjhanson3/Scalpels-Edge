@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: e11b183e7b1f248f9bd55ac8a0b551b3
+guid: 8d3e4aaff1ece4f66a3662c1593897ce
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: 4180823990559918192
-    second: soldier3.001|soldier3
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -71,7 +68,8 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 9eb94b03548ee4d9ab695c5a0b6bf6a3
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
