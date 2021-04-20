@@ -23,7 +23,7 @@ public class UseItem : MonoBehaviour
         //Then, one mouseclick, use cast to get wound object and woundType
         //Compare types, disappear if they match
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<cameraMovement>().enabled)
         {
             healType = pickUpScript.itemID;
             //print(healType);

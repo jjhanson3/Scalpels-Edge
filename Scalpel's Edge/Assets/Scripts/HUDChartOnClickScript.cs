@@ -11,10 +11,10 @@ public class HUDChartOnClickScript : MonoBehaviour
 
     //Allows tuple info to be assigned by and updated independently
     //Talking to receptionist to get better description or outlook changing over time for example
-    public string patientName;
-    public int patientAge;
-    public string patientDescription;
-    public int patientOutlook;
+    private string patientName = "Empty Bed";
+    private int patientAge = 0;
+    private string patientDescription = "An empty bed, no patient currently";
+    private int patientOutlook = 1;
 
     //currently, this is just text and a blank background
     public GameObject chartText;

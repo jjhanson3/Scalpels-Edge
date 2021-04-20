@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Wound : MonoBehaviour
 {
-
     public string woundType;
 
     //number to subract severity from to calculate intervals
@@ -16,19 +15,25 @@ public class Wound : MonoBehaviour
     //but is subject to change
     private int intervals;
 
+    public GameObject nearestBoard = null;
     // Start is called before the first frame update
     void Start()
     {
         GameObject player = GameObject.Find("Player");
         //itemPickUpScript playerScript = player.GetComponent<itemPickUpScript>();
+        
+        getWound();
         intervals = tempInverse - severity;
+        nearestBoard = gameObject.GetComponentInParent<BedScript>().clipboard;
+        //Debug.Log("During instantiation");
+        nearestBoard.GetComponent<HUDChartOnClickScript>().UpdateData(newDesc: woundType, newOutlook: severity);
         player.GetComponent<GlobalTimerScript>().AddWound(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //on disable called when object is set to inactive
@@ -36,6 +41,7 @@ public class Wound : MonoBehaviour
     {
         GameObject player = GameObject.Find("Player");
         player.GetComponent<GlobalTimerScript>().RemoveWound(gameObject);
+        nearestBoard.GetComponent<HUDChartOnClickScript>().UpdateData(newDesc: "healed", newOutlook: 1);
 
     }
 
@@ -67,7 +73,6 @@ public class Wound : MonoBehaviour
             //call function to update nearby clipboard info
             intervals = tempInverse - severity;
         }
-        Debug.Log("Wound Severity: " + severity);
+        nearestBoard.GetComponent<HUDChartOnClickScript>().UpdateData(newDesc: woundType, newOutlook: severity);
     }
 }
-

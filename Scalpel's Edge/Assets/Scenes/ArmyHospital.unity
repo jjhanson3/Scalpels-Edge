@@ -259,10 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 3-2
-  patientAge: 32
-  patientDescription: Dummy Desc.
-  patientOutlook: 3
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &9024803
@@ -798,8 +794,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 18062508}
+  - component: {fileID: 18062509}
   m_Layer: 0
-  m_Name: PatientBed (8)
+  m_Name: PatientBed 3-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,6 +818,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &18062509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18062507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 577161494}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!4 &45354573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21a2225b119514178b9dc788c73842cc,
@@ -4566,8 +4580,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 372335288}
+  - component: {fileID: 372335289}
   m_Layer: 0
-  m_Name: PatientBed (2)
+  m_Name: PatientBed 3-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4589,6 +4604,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &372335289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372335287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 998866558}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1 &393893865
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,10 +5615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 2-2
-  patientAge: 22
-  patientDescription: Dummy Desc.
-  patientOutlook: 1
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &491009705
@@ -5876,8 +5904,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548204814}
+  - component: {fileID: 548204815}
   m_Layer: 0
-  m_Name: PatientBed (20)
+  m_Name: PatientBed 1-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5897,8 +5926,25 @@ Transform:
   - {fileID: 934765973}
   - {fileID: 9173821}
   m_Father: {fileID: 1452235480}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &548204815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548204813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 925269166}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1 &548937437
 GameObject:
   m_ObjectHideFlags: 0
@@ -6334,10 +6380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 2-1
-  patientAge: 21
-  patientDescription: Dummy Desc.
-  patientOutlook: 0
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &576558310
@@ -6478,10 +6520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 3-4
-  patientAge: 34
-  patientDescription: Dummy Desc.
-  patientOutlook: 4
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &577507284
@@ -6808,10 +6846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 2-3
-  patientAge: 23
-  patientDescription: Dummy Desc.
-  patientOutlook: 4
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &588176585
@@ -8045,10 +8079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 2-4
-  patientAge: 24
-  patientDescription: Dummy Desc.
-  patientOutlook: 3
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &723044445
@@ -9913,10 +9943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 3-3
-  patientAge: 33
-  patientDescription: Dummy Desc.
-  patientOutlook: 3
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &868108152
@@ -10162,6 +10188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   woundType: Open Wound
+  tempInverse: 0
+  severity: 0
+  nearestBoard: {fileID: 0}
 --- !u!65 &884679527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10731,10 +10760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 1-4
-  patientAge: 14
-  patientDescription: Dummy Desc.
-  patientOutlook: 2
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &929977050
@@ -11627,10 +11652,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 3-1
-  patientAge: 31
-  patientDescription: Dummy Desc.
-  patientOutlook: 4
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &1008575742
@@ -12166,10 +12187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 1-3
-  patientAge: 13
-  patientDescription: Dummy Desc.
-  patientOutlook: 1
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1 &1044867952
@@ -13216,8 +13233,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1137626439}
+  - component: {fileID: 1137626440}
   m_Layer: 0
-  m_Name: PatientBed (24)
+  m_Name: PatientBed 1-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13237,8 +13255,25 @@ Transform:
   - {fileID: 2063474196}
   - {fileID: 947128380}
   m_Father: {fileID: 1452235480}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137626440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137626438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 1038355333}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1001 &1145327192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14351,8 +14386,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1224867757}
+  - component: {fileID: 1224867758}
   m_Layer: 0
-  m_Name: PatientBed (16)
+  m_Name: PatientBed 2-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14374,6 +14410,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1224867758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224867756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 701313436}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1 &1231508380
 GameObject:
   m_ObjectHideFlags: 0
@@ -14991,8 +15044,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1291774366}
+  - component: {fileID: 1291774367}
   m_Layer: 0
-  m_Name: PatientBed (7)
+  m_Name: PatientBed 3-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15014,6 +15068,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291774367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291774365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 0
+  clipboard: {fileID: 864365161}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1 &1302441794
 GameObject:
   m_ObjectHideFlags: 0
@@ -15023,8 +15094,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1302441795}
+  - component: {fileID: 1302441796}
   m_Layer: 0
-  m_Name: PatientBed (1)
+  m_Name: PatientBed 3-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15046,6 +15118,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302441796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302441794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 8716512}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!4 &1324549732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21a2225b119514178b9dc788c73842cc,
@@ -15097,10 +15186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 1-1
-  patientAge: 11
-  patientDescription: Dummy Desc.
-  patientOutlook: 4
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!4 &1328049927 stripped
@@ -15384,8 +15469,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1351960212}
+  - component: {fileID: 1351960213}
   m_Layer: 0
-  m_Name: PatientBed (9)
+  m_Name: PatientBed 2-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15407,6 +15493,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1351960213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351960211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 490570759}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1 &1356199304
 GameObject:
   m_ObjectHideFlags: 0
@@ -16426,9 +16529,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e586201ddb3ac8438149d3a47d7f61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnActive: 0
+  spawnActive: 1
   conditionActive: 1
+  spawnIntervals: 1
+  spawnCount: 1
   interval: 10
+  allBeds: {fileID: 1452235479}
 --- !u!1 &1423873239
 GameObject:
   m_ObjectHideFlags: 0
@@ -16933,7 +17039,6 @@ Transform:
   - {fileID: 1710603815}
   - {fileID: 1224867757}
   - {fileID: 1821318986}
-  - {fileID: 1902173394}
   - {fileID: 548204814}
   - {fileID: 1818716331}
   - {fileID: 1137626439}
@@ -17135,8 +17240,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1462133018}
+  - component: {fileID: 1462133019}
   m_Layer: 0
-  m_Name: PatientBed (12)
+  m_Name: PatientBed 2-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17158,6 +17264,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1462133019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462133017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 579799670}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1 &1475528638
 GameObject:
   m_ObjectHideFlags: 0
@@ -19351,8 +19474,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710603815}
+  - component: {fileID: 1710603816}
   m_Layer: 0
-  m_Name: PatientBed (13)
+  m_Name: PatientBed 2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19374,6 +19498,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1710603816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710603814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 574791455}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!4 &1711637328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21a2225b119514178b9dc788c73842cc,
@@ -20416,8 +20557,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1818716331}
+  - component: {fileID: 1818716332}
   m_Layer: 0
-  m_Name: PatientBed (21)
+  m_Name: PatientBed 1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20437,8 +20579,25 @@ Transform:
   - {fileID: 625384186}
   - {fileID: 2134855564}
   m_Father: {fileID: 1452235480}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1818716332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818716330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 1866384408}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1 &1821318985
 GameObject:
   m_ObjectHideFlags: 0
@@ -20448,8 +20607,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821318986}
+  - component: {fileID: 1821318987}
   m_Layer: 0
-  m_Name: PatientBed (17)
+  m_Name: PatientBed 1-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20472,6 +20632,23 @@ Transform:
   m_Father: {fileID: 1452235480}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821318987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821318985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ae4d8bd1bc7c64e88b714fe5ebf315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
+  clipboard: {fileID: 1324799111}
+  wound: {fileID: 0}
+  woundToSpawn: {fileID: 3973697257855258798, guid: 01cd495a880f8b048aa697321710508f,
+    type: 3}
 --- !u!1001 &1828418686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21080,10 +21257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a4fd39c3100134f8857e44bab5c310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patientName: 12
-  patientAge: 112
-  patientDescription: Dummy Desc.
-  patientOutlook: 5
   chartText: {fileID: 838251807}
   chartParent: {fileID: 1871898368}
 --- !u!1001 &1866583216
@@ -21627,36 +21800,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898357566}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1902173393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1902173394}
-  m_Layer: 0
-  m_Name: PatientBed (18)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1902173394
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902173393}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.46, y: 68.48057, z: 26.500002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1452235480}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910846655
 GameObject:
   m_ObjectHideFlags: 0
@@ -24165,6 +24308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   woundType: Open Wound
+  tempInverse: 0
+  severity: 0
+  nearestBoard: {fileID: 0}
 --- !u!1 &2134855563
 GameObject:
   m_ObjectHideFlags: 0

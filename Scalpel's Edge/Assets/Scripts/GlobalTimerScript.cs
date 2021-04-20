@@ -9,6 +9,14 @@ public class GlobalTimerScript : MonoBehaviour
     //should patient condition worsen?
     public bool conditionActive;
 
+    //How often should patients spawn?
+    public int spawnIntervals;
+
+    //How many patients should be spawned?
+    public int spawnCount;
+
+    private int inc;
+
     //How big the interval should be for actions.
     //Upon creation, wounds should have an interval field
     //representing how many intervals should pass before condition worsens.
@@ -23,13 +31,13 @@ public class GlobalTimerScript : MonoBehaviour
     private List<GameObject> woundsList = new List<GameObject>();
 
     //array containing all beds will be checked to find an empty one for new patients
-    public GameObject[,] beds = new GameObject[3, 4];
+    public GameObject allBeds;
 
     // Start is called before the first frame update
     void Start()
     {
         //maybe initialize the patiets to spawn for a level here?
-        //Not sure what else should go here
+        
     }
 
     // Update is called once per frame
@@ -54,11 +62,34 @@ public class GlobalTimerScript : MonoBehaviour
             }
             if (spawnActive)
             {
-                //choose location
-
-                //create at location
-
-                
+                if (inc < spawnIntervals)
+                {
+                    inc++;
+                }
+                else
+                {
+                    //choose location
+                    bool spawned = false;
+                    while (!spawned)
+                    {
+                        int randBedIndex = Random.Range(0, allBeds.transform.childCount);
+                        Transform randBed = allBeds.transform.GetChild(randBedIndex);
+                        if (randBed.GetComponent<BedScript>().isEmpty)
+                        {
+                            //bed is empty, we can spawn here and break
+                            
+                            spawned = true;
+                            randBed.GetComponent<BedScript>().MakeNewWound();
+                            Debug.Log("Wound created at " + randBed.name);
+                        }
+                    }
+                    inc = 0;
+                    spawnCount--;
+                    if (spawnCount == 0)
+                    {
+                        spawnActive = false;
+                    }
+                }
             }
         }
     }
