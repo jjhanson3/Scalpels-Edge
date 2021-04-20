@@ -108,6 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   woundType: 
+  tempInverse: 10
+  severity: 3
 --- !u!54 &3973697257855258792
 Rigidbody:
   m_ObjectHideFlags: 0
