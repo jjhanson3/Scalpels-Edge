@@ -20,7 +20,7 @@ Patient: Not much to tell, really. My rifle malfunctioned during a patrol and a 
 
 [[How are you feeling? |Condition]]
 
-[[I'll check in with you later |Exit]]
+[[I'll check in with you later. (Exit Dialogue) |Exit]]
 ===
 title: Condition
 tags: 
@@ -31,12 +31,13 @@ Patient: I'm alright. It's nothing too serious. Can I leave yet?
 
 [[Tell me about your injury first. |Injury]]
 
-[[Not yet. I'll check in with you soon. |Exit]]
+[[Not yet. I'll check in with you soon. (Exit Dialogue) |Exit]]
 ===
 title: Exit
 tags: 
 colorID: 0
 position: 890,-109
 ---
-<<stop>>
+Patient: See you later.
+<<wait 3>>
 ===

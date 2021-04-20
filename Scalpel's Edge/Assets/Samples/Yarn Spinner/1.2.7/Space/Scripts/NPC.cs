@@ -47,7 +47,7 @@ namespace Yarn.Unity.Example {
                 //dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
                 dialogueRunner.Add(scriptToLoad); 
                 
-                rb.isKinematic = false;
+                //rb.isKinematic = false;
                 coll.isTrigger = false;               
             }
         }
