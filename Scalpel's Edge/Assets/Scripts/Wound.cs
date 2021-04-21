@@ -24,7 +24,7 @@ public class Wound : MonoBehaviour
         
         getWound();
         intervals = tempInverse - severity;
-        nearestBoard = gameObject.GetComponentInParent<BedScript>().clipboard;
+        //nearestBoard = gameObject.GetComponentInParent<BedScript>().clipboard;
         //Debug.Log("During instantiation");
         nearestBoard.GetComponent<HUDChartOnClickScript>().UpdateData(newDesc: woundType, newOutlook: severity);
         player.GetComponent<GlobalTimerScript>().AddWound(gameObject);
@@ -39,9 +39,9 @@ public class Wound : MonoBehaviour
     //on disable called when object is set to inactive
     private void OnDisable()
     {
-        GameObject player = GameObject.Find("Player");
-        player.GetComponent<GlobalTimerScript>().RemoveWound(gameObject);
-        nearestBoard.GetComponent<HUDChartOnClickScript>().UpdateData(newDesc: "healed", newOutlook: 1);
+        //GameObject player = GameObject.Find("Player");
+        //player.GetComponent<GlobalTimerScript>().RemoveWound(gameObject);
+        //nearestBoard.GetComponent<HUDChartOnClickScript>().UpdateData(newDesc: "healed", newOutlook: 1);
 
     }
 

@@ -65,8 +65,16 @@ public class itemPickUpScript : MonoBehaviour
                     rb.isKinematic = true;
                     coll.isTrigger = true;
                     itemTreatment = objTransform.GetComponent<Treatment>();
+                    if(itemTreatment==null) {
+                        print("itemTreatment is null");
+                    }
                     itemID = itemTreatment.getTreatment();
+                    if(itemID==null||itemID=="") {
+                        print("itemID is null");
+                    }
                     //print(itemID);
+                    //print("Success");
+                    //definitely making it here.
                 }
             }
         }
