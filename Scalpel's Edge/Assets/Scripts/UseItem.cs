@@ -37,8 +37,15 @@ public class UseItem : MonoBehaviour
                 print(hitObject);
                 Wound hitWound = hitObject.GetComponent<Wound>();
 
-                woundType = hitWound.getWound();
-                print(woundType);
+                if (hitWound != null)
+                {
+                    woundType = hitWound.getWound();
+                    print(woundType);
+                } else
+                {
+                    print("WoundType is Null");
+                }
+
 
                 if (woundType == "Open Wound" && healType == "Bandage")
                 {
