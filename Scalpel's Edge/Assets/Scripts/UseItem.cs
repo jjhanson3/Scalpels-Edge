@@ -44,6 +44,7 @@ public class UseItem : MonoBehaviour
                 } else
                 {
                     print("WoundType is Null");
+                    woundType="";
                 }
 
 
