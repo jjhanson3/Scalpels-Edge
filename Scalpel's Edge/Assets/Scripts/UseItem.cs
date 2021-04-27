@@ -29,9 +29,8 @@ public class UseItem : MonoBehaviour
         //Then, one mouseclick, use cast to get wound object and woundType
         //Compare types, disappear if they match
         
-        if (/*Input.GetMouseButtonDown(0) && */Camera.main.GetComponent<cameraMovement>().enabled)
+        if (Camera.main.GetComponent<cameraMovement>().enabled)
         {
-            print(pickUpScript.itemID);
             healType = pickUpScript.itemID;
             //print(healType);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -40,18 +39,15 @@ public class UseItem : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitObject = hit.collider.gameObject;
-                print(hitObject);
                 Wound hitWound = hitObject.GetComponent<Wound>();
 
                 if (hitWound != null)
                 {
                     woundType = hitWound.getWound();
                     hudActionManager.updatePlayerAction("Treat");
-                    print(woundType);
                 }
                 else
                 {
-                    print("WoundType is Null");
                     hudActionManager.clearPlayerAction("Treat");
                     woundType = "";
                 }
@@ -60,7 +56,6 @@ public class UseItem : MonoBehaviour
                 {
                     if (woundType == "Open Wound" && healType == "Bandage")
                     {
-                        print("check 1");
                         hitObject.SetActive(false);
                     }
                     else if (woundType == "Burn Cream" && healType == "Burn")

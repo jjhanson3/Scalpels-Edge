@@ -6,27 +6,6 @@ public class HUDActionManager : MonoBehaviour
 {
     private string actionInfo = "";
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (actionInfo == "Pickup")
-        { //Display "[E] Pickup"
-            print("It is pick up time player");
-        }
-        else if (actionInfo == "Treat")
-        { //Display "[Click] Treat"
-            print("It is treat time player");
-        }
-        else if (actionInfo == "Talk")
-        { //Display "[T] Talk"
-            print("It is talk time player");
-        }
-        else if (actionInfo == "")
-        { //Return to empty state
-
-        }
-    }
-
     // Displays what control the player needs to press to do the corresponding action
     public void updatePlayerAction (string possibleAction)
     {
@@ -48,5 +27,10 @@ public class HUDActionManager : MonoBehaviour
             actionInfo = "";
             print("set actionInfo to nothing");
         }
+    }
+
+    public string getPlayerAction ()
+    {
+        return actionInfo;
     }
 }
