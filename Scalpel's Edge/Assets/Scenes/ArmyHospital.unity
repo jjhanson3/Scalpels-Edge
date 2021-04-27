@@ -5543,8 +5543,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468629972}
+  - component: {fileID: 468629973}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: HUDActionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5564,6 +5565,18 @@ Transform:
   m_Father: {fileID: 1417400535}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &468629973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468629971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f347a63fb6a04d4f8ca5a8259e823d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &490570759
 GameObject:
   m_ObjectHideFlags: 0
@@ -16392,6 +16405,7 @@ GameObject:
   - component: {fileID: 1417400532}
   - component: {fileID: 1417400536}
   - component: {fileID: 1417400537}
+  - component: {fileID: 1417400539}
   - component: {fileID: 1417400538}
   m_Layer: 0
   m_Name: Player
@@ -16529,6 +16543,18 @@ MonoBehaviour:
   spawnCount: 1
   interval: 10
   allBeds: {fileID: 1452235479}
+--- !u!114 &1417400539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417400531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f347a63fb6a04d4f8ca5a8259e823d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423873239
 GameObject:
   m_ObjectHideFlags: 0

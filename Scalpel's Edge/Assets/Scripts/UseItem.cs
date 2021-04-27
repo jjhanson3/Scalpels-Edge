@@ -8,12 +8,18 @@ public class UseItem : MonoBehaviour
     public string woundType;
     public string healType;
     private itemPickUpScript pickUpScript;
+    private HUDActionManager hudActionManager;
 
     // Start is called before the first frame update
     void Start()
     {
         coll = GetComponent<Collider>();
         pickUpScript = gameObject.GetComponent<itemPickUpScript>();
+    }
+
+    private void Awake()
+    {
+        hudActionManager = GameObject.FindObjectOfType<HUDActionManager>();
     }
 
     // Update is called once per frame
@@ -23,7 +29,7 @@ public class UseItem : MonoBehaviour
         //Then, one mouseclick, use cast to get wound object and woundType
         //Compare types, disappear if they match
         
-        if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<cameraMovement>().enabled)
+        if (/*Input.GetMouseButtonDown(0) && */Camera.main.GetComponent<cameraMovement>().enabled)
         {
             print(pickUpScript.itemID);
             healType = pickUpScript.itemID;
@@ -40,26 +46,31 @@ public class UseItem : MonoBehaviour
                 if (hitWound != null)
                 {
                     woundType = hitWound.getWound();
+                    hudActionManager.updatePlayerAction("Treat");
                     print(woundType);
-                } else
+                }
+                else
                 {
                     print("WoundType is Null");
-                    woundType="";
+                    hudActionManager.clearPlayerAction("Treat");
+                    woundType = "";
                 }
 
-
-                if (woundType == "Open Wound" && healType == "Bandage")
+                if (Input.GetMouseButtonDown(0))
                 {
-                    print("check 1");
-                    hitObject.SetActive(false);
-                }
-                else if (woundType == "Burn Cream" && healType == "Burn")
-                {
-                    hitObject.SetActive(false);
-                }
-                else if (woundType == "Infection" && healType == "Antibiotics")
-                {
-                    hitObject.SetActive(false);
+                    if (woundType == "Open Wound" && healType == "Bandage")
+                    {
+                        print("check 1");
+                        hitObject.SetActive(false);
+                    }
+                    else if (woundType == "Burn Cream" && healType == "Burn")
+                    {
+                        hitObject.SetActive(false);
+                    }
+                    else if (woundType == "Infection" && healType == "Antibiotics")
+                    {
+                        hitObject.SetActive(false);
+                    }
                 }
             }
         }

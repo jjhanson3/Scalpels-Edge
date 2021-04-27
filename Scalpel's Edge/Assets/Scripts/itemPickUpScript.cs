@@ -15,6 +15,7 @@ public class itemPickUpScript : MonoBehaviour
     public Treatment itemTreatment;
     public string itemID;
 
+
     [SerializeField]
     private float pickUpRange;
 
@@ -22,6 +23,8 @@ public class itemPickUpScript : MonoBehaviour
 
     public bool equipped;
     public static bool slotFull;
+
+    private HUDActionManager hudActionManager;
 
     //variables needed for properly targeting
     [SerializeField]
@@ -38,6 +41,11 @@ public class itemPickUpScript : MonoBehaviour
         //coll.isTrigger = false;
     }
 
+    private void Awake()
+    {
+        hudActionManager = GameObject.FindObjectOfType<HUDActionManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -49,6 +57,10 @@ public class itemPickUpScript : MonoBehaviour
             var selection = hit.transform;
             if (selection.CompareTag("Antibiotics") || selection.CompareTag("Burn Creams") || selection.CompareTag("Bandages"))
             {
+                if (distanceToPlayer.magnitude <= pickUpRange)
+                {
+                    hudActionManager.updatePlayerAction("Pickup");
+                }
                 if (Input.GetKeyDown("e") && !equipped && distanceToPlayer.magnitude <= pickUpRange && !slotFull)
                 {
                     print("Item has been picked up");
@@ -76,6 +88,9 @@ public class itemPickUpScript : MonoBehaviour
                     //print("Success");
                     //definitely making it here.
                 }
+            } else
+            {
+                hudActionManager.clearPlayerAction("Pickup");
             }
         }
 

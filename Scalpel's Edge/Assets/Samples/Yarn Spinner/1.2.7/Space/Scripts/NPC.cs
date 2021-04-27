@@ -41,6 +41,9 @@ namespace Yarn.Unity.Example {
         public YarnProgram scriptToLoad;
         
         public DialogueRunner dialogueRunner;
+
+        private HUDActionManager hudActionManager;
+
         void Start () {
             if (scriptToLoad != null) {
                 Debug.Log(scriptToLoad);
@@ -52,7 +55,12 @@ namespace Yarn.Unity.Example {
             }
         }
 
-            public Rigidbody rb;
+        private void Awake()
+        {
+            hudActionManager = GameObject.FindObjectOfType<HUDActionManager>();
+        }
+
+        public Rigidbody rb;
             public BoxCollider coll;
             public Transform player, HandContainer, cam;
 
@@ -86,15 +94,22 @@ namespace Yarn.Unity.Example {
                     //Debug.Log("Check 1");
                     var selectionRenderer = selection.GetComponent<Renderer>();
                     if (selectionRenderer != null) {
-                        if (Input.GetKeyDown("t") && distanceToPlayer.magnitude <= speakingRange) {
-                            //PickUp();
-                            //Debug.Log("check 2");
-                            dialogueRunner.StartDialogue(talkToNode);
-
+                        if (distanceToPlayer.magnitude <= speakingRange) {
+                            hudActionManager.updatePlayerAction("Talk");
+                            if (Input.GetKeyDown("t"))
+                            {
+                                //PickUp();
+                                //Debug.Log("check 2");
+                                dialogueRunner.StartDialogue(talkToNode);
+                            }
                         } 
-                    }
+
+                    } 
+                } else
+                {
+                    hudActionManager.clearPlayerAction("Talk");
                 }
-                }
+            }
 
         
             }
