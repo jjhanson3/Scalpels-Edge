@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: a52f860b0eda8ab40ab026f27c80eabe
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Chris-Start-0
+  - Chris-Start-1
+  - Chris-Start-2
+  - Chris-Story-3
+  - Chris-Story-4
+  - Chris-Sam-5
+  - Chris-Sam-6
+  - Chris-Sam-7
+  - Chris-Sam-8
+  - Chris-Injury-9
+  - Chris-Injury-10
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

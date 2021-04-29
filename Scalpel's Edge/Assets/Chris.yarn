@@ -1,0 +1,43 @@
+title: Start
+tags: 
+colorID: 0
+position: 581,-180
+---
+Chris: Hello, doctor. Call me Chris. What can I do to help?
+[[Tell me about your injury.|Story]]
+[[It seems like Samuel’s more bothered by the treatment than the injury…|Sam]]
+===
+title: Story
+tags: 
+colorID: 0
+position: 700,-400
+---
+Chris: I was here a little while ago. I’d been shot in my left shoulder while on patrol, and needed hospitalization. They removed a few bullet fragments and patched me up, and I thought it was the end of it. Well, about a week ago I noticed some swelling, and the area around the wound was discolored. A fever came along a few days later, so I figured something must be going on. Here I am.
+[[Alright, let's see it|Injury]]
+===
+title: Sam
+tags: 
+colorID: 0
+position: 920,-402
+---
+Chris: He thinks that we’re all lost children, that the unit can’t function without his experience. He feels responsible. It’s a shame he expresses it like an ass...
+
+Still, he didn’t deserve such incompetent orders. I mean, Command ordering soldiers to jump from a helicopter without a parachute? What got into them?
+[[Tell me about your injury.|Injury]]
+[[I'll talk to you later.(Exit Dialogue)|Exit]]
+===
+title: Injury
+tags: 
+colorID: 0
+position: 820,-621
+---
+Chris’s description of the wounded area is entirely accurate. It seems as if the wound was improperly treated, and an infection has taken root. He should have come to you sooner.
+[[I'll be back soon.(Exit Dialogue)|Exit]]
+===
+title: Exit
+tags: 
+colorID: 0
+position: 940,-840
+---
+<<wait 2>>
+===

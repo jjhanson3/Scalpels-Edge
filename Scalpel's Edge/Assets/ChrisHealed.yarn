@@ -1,0 +1,15 @@
+title: Start
+tags: 
+colorID: 0
+position: 764,-507
+---
+Chris: Thanks a lot, that feels a lot better. Sorry again I didn’t come here sooner, I figured those bastards would be able to fix a bullet wound during wartime normally. Oh well. Thanks again, doctor.
+[[You're welcome.(Exit Dialogue)|Exit]]
+===
+title: Exit
+tags: 
+colorID: 0
+position: 884,-727
+---
+<<wait 2>>
+===

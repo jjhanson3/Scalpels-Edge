@@ -588,9 +588,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Patient
   talkToNode: Start
+  oneTime: 0
+  multiScript: 0
   scriptToLoad: {fileID: 2480198943629176163, guid: 97f137d16120a1c4babf420fea7ded5f,
     type: 3}
+  scriptToLoad2: {fileID: 0}
   dialogueRunner: {fileID: 1235824060}
+  woundArea: {fileID: 0}
   rb: {fileID: 13162083}
   coll: {fileID: 13162084}
   player: {fileID: 1417400535}
@@ -3197,9 +3201,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Patient
   talkToNode: Start
-  scriptToLoad: {fileID: 2480198943629176163, guid: 97f137d16120a1c4babf420fea7ded5f,
+  oneTime: 0
+  multiScript: 1
+  scriptToLoad: {fileID: 2480198943629176163, guid: a52f860b0eda8ab40ab026f27c80eabe,
+    type: 3}
+  scriptToLoad2: {fileID: 2480198943629176163, guid: f772276bd61dbb14f8b1917f683332d0,
     type: 3}
   dialogueRunner: {fileID: 1235824060}
+  woundArea: {fileID: 215779254}
   rb: {fileID: 215779252}
   coll: {fileID: 215779253}
   player: {fileID: 1417400535}
@@ -3237,6 +3246,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09, y: 0.025, z: 0.17}
   m_Center: {x: 0.004781945, y: 0.11456978, z: 0.025497146}
+--- !u!1 &215779254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6275942739725408208, guid: 43668aa299de544dd9592b952f60f17b,
+    type: 3}
+  m_PrefabInstance: {fileID: 215779249}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &224247436
 GameObject:
   m_ObjectHideFlags: 0
@@ -9864,7 +9879,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4, y: 143}
-  m_SizeDelta: {x: 900, y: 90}
+  m_SizeDelta: {x: 1100, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860839360
 MonoBehaviour:
@@ -10883,15 +10898,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930338555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3419b57eb638f44db88701b5b33b8af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: General Ford
   talkToNode: Start
+  oneTime: 0
+  multiScript: 0
   scriptToLoad: {fileID: 0}
+  scriptToLoad2: {fileID: 0}
   dialogueRunner: {fileID: 0}
+  woundArea: {fileID: 0}
   rb: {fileID: 0}
   coll: {fileID: 0}
   player: {fileID: 0}
@@ -17755,15 +17774,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476920173}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3419b57eb638f44db88701b5b33b8af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
   talkToNode: 
+  oneTime: 0
+  multiScript: 0
   scriptToLoad: {fileID: 0}
+  scriptToLoad2: {fileID: 0}
   dialogueRunner: {fileID: 0}
+  woundArea: {fileID: 0}
   rb: {fileID: 0}
   coll: {fileID: 0}
   player: {fileID: 0}

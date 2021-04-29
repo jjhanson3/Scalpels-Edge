@@ -37,12 +37,21 @@ namespace Yarn.Unity.Example {
 
         public string talkToNode = "";
 
+        public bool oneTime;
+
+        public bool multiScript;
+
         [Header("Optional")]
         public YarnProgram scriptToLoad;
+
+        public YarnProgram scriptToLoad2;
         
         public DialogueRunner dialogueRunner;
 
         private HUDActionManager hudActionManager;
+
+        public GameObject woundArea;
+        
 
         void Start () {
             if (scriptToLoad != null) {
@@ -99,7 +108,16 @@ namespace Yarn.Unity.Example {
                             if (Input.GetKeyDown("t"))
                             {
                                 //PickUp();
-                                //Debug.Log("check 2");
+                                Debug.Log("check 2");
+                                if(multiScript) {
+                                
+                                    //GameObject p = transform.root.gameObject;
+                                    if(woundArea.GetComponentInChildren<Wound>()==null) {//this condition is not working properly, false positive
+                                        Debug.Log("Hello");
+                                        dialogueRunner.Add(scriptToLoad2);
+                                    }
+                                }
+                                
                                 dialogueRunner.StartDialogue(talkToNode);
                             }
                         } 
@@ -113,5 +131,8 @@ namespace Yarn.Unity.Example {
 
         
             }
+            //public void setInactive() {
+                //this.enabled = false;
+            //}
         }
     }
