@@ -114,6 +114,7 @@ namespace Yarn.Unity.Example {
                                     //GameObject p = transform.root.gameObject;
                                     if(woundArea.GetComponentInChildren<Wound>()==null) {//this condition is not working properly, false positive
                                         Debug.Log("Hello");
+                                        dialogueRunner.Clear();
                                         dialogueRunner.Add(scriptToLoad2);
                                     }
                                 }
