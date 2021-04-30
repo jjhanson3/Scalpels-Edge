@@ -1,0 +1,43 @@
+title: Start
+tags: 
+colorID: 0
+position: 380,281
+---
+Samuel: Hello Doc. We’d better make this quick.
+[[It'll take as long as it needs to. Tell me what happened.|Story]]
+[[Noted. What's the situation?|Story]]
+===
+title: Story
+tags: 
+colorID: 0
+position: 500,61
+---
+Samuel: I’ve suffered a minor injury to my ankles. We had orders to set down in an active combat zone, and the only available means was to jump from the helicopter without a parachute. Needless to say, I missed the landing. A pained smile, then quickly defaults to his morose expression. My unit’s still there, so I’d like to speed things along.
+[[Let me take a look.(Examine the injury)|Wound]]
+===
+title: Wound
+tags: 
+colorID: 0
+position: 620,-158
+---
+A large, red gash runs down the man’s right thigh. It’s clear he landed on something sharp, and his bandages are in need of replacement. Based on his condition you surmise treatment could take several weeks. A decidedly non-minor injury.
+[[It’ll be at least a few weeks before you’re up and running.|Admonishment]]
+[[I can't make any promises.|Admonishment]]
+[[I'll be back soon.(Exit Dialogue)|Exit]]
+===
+title: Admonishment
+tags: 
+colorID: 0
+position: 740,-379
+---
+Samuel: Listen here, doc. You see Chris over there? He’s been in the army for about 2 months. Not too long ago you could have asked him what a land mine looks like, and he would have had no answer for you. My unit is full of Chris’s. I need to be there with them.
+[[I’ll do what I can.(Exit Dialogue)|Exit]]
+[[Not my problem.(Exit Dialogue)|Exit]]
+===
+title: Exit
+tags: 
+colorID: 0
+position: 960,-379
+---
+
+===

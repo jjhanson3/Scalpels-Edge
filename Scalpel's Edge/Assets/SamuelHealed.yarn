@@ -1,0 +1,15 @@
+title: Start
+tags: 
+colorID: 0
+position: 644,-51
+---
+Samuel: Ugh...can’t believe I’m still gonna be stuck in here for two weeks. Well, at least the pain’s subsided to some extent, so thanks for that. Just...let me know how soon I can get out of here, alright? I feel like I’m gonna go crazy.
+[[We'll get you out of here as soon as we can.(Exit Dialogue)|Exit]]
+===
+title: Exit
+tags: 
+colorID: 0
+position: 764,-271
+---
+
+===

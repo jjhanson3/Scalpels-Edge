@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 32feffbe8a6813e47a3a9b75bf7b64e2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - DrBrown-Start-0
+  - DrBrown-Start-1
+  - DrBrown-Start-2
+  - DrBrown-Start-3
+  - DrBrown-Charts-4
+  - DrBrown-Charts-5
+  - DrBrown-Charts-6
+  - DrBrown-Supplies-7
+  - DrBrown-Supplies-8
+  - DrBrown-Supplies-9
+  - DrBrown-StartAgain-10
+  - DrBrown-StartAgain-11
+  - DrBrown-StartAgain-12
+  - DrBrown-StartAgain-13
+  - DrBrown-StartAgain-14
+  - DrBrown-Shipment-15
+  - DrBrown-Shipment-16
+  - DrBrown-Shipment-17
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 32feffbe8a6813e47a3a9b75bf7b64e2,
+    type: 3}
+  localizations: []

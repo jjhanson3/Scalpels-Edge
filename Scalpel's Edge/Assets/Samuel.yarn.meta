@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 2aaa5152b4e81cf4a859feabf75ea0f8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Samuel-Start-0
+  - Samuel-Start-1
+  - Samuel-Start-2
+  - Samuel-Story-3
+  - Samuel-Story-4
+  - Samuel-Wound-5
+  - Samuel-Wound-6
+  - Samuel-Wound-7
+  - Samuel-Wound-8
+  - Samuel-Admonishment-9
+  - Samuel-Admonishment-10
+  - Samuel-Admonishment-11
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

@@ -1,0 +1,39 @@
+title: Start
+tags: 
+colorID: 0
+position: 758,-574
+---
+General Ford: You’re late, doctor! Your patients are waiting. Why have you not seen them yet?
+[[I'm going as fast as I can|NotEnough]]
+[[Who are you?|Introduction]]
+===
+title: NotEnough
+tags: 
+colorID: 0
+position: 878,-794
+---
+General Ford: Well clearly, it’s not quite enough. My men are hurting. Go now, before their conditions worsen.
+[[Who are you?|Introduction]]
+[[I'll be on my way.(Exit Dialogue)|Exit]]
+===
+title: Introduction
+tags: 
+colorID: 0
+position: 1098,-794
+---
+General Ford: Are you new here? I’m General Ford. I’m in charge of this unit for the remainder of this god-forsaken war and have authority within this hospital. I’ve been here many times, but I’ve never seen you…
+
+<<wait 4>>
+
+General Ford: It figures that they would assign a newbie for me.
+[[I am not new here.(Exit Dialogue)|Exit]]
+[[We're wasting time. I'll go see them now.(Exit Dialogue)|Exit]]
+===
+title: Exit
+tags: 
+colorID: 0
+position: 1218,-1014
+---
+General Ford: You’ll find them by the front desk.
+<<wait 2>>
+===

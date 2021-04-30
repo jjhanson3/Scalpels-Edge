@@ -57,6 +57,7 @@ namespace Yarn.Unity.Example {
             if (scriptToLoad != null) {
                 Debug.Log(scriptToLoad);
                 //dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+                dialogueRunner.Clear();
                 dialogueRunner.Add(scriptToLoad); 
                 
                 //rb.isKinematic = false;
@@ -109,17 +110,23 @@ namespace Yarn.Unity.Example {
                             {
                                 //PickUp();
                                 Debug.Log("check 2");
-                                if(multiScript) {
-                                
-                                    //GameObject p = transform.root.gameObject;
-                                    if(woundArea.GetComponentInChildren<Wound>()==null) {//this condition is not working properly, false positive
-                                        Debug.Log("Hello");
-                                        dialogueRunner.Clear();
-                                        dialogueRunner.Add(scriptToLoad2);
-                                    }
+                                if(multiScript&&woundArea.GetComponentInChildren<Wound>()==null) {
+                                //GameObject p = transform.root.gameObject;
+                                    
+                                    dialogueRunner.Clear();
+                                    dialogueRunner.Add(scriptToLoad2);
+                                    
                                 }
-                                
+                                else {
+                                    dialogueRunner.Clear();
+                                    dialogueRunner.Add(scriptToLoad);
+                                }
                                 dialogueRunner.StartDialogue(talkToNode);
+                                if(oneTime) {
+                                    setInactive();
+                                }
+                                dialogueRunner.Clear();
+                                
                             }
                         } 
 
@@ -132,8 +139,8 @@ namespace Yarn.Unity.Example {
 
         
             }
-            //public void setInactive() {
-                //this.enabled = false;
-            //}
+            public void setInactive() {
+                this.enabled = false;
+            }
         }
     }

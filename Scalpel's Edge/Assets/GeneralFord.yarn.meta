@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: bfc891ce825b0b24d89f63d36b478c9f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - GeneralFord-Start-0
+  - GeneralFord-Start-1
+  - GeneralFord-Start-2
+  - GeneralFord-NotEnough-3
+  - GeneralFord-NotEnough-4
+  - GeneralFord-NotEnough-5
+  - GeneralFord-Introduction-6
+  - GeneralFord-Introduction-7
+  - GeneralFord-Introduction-8
+  - GeneralFord-Introduction-9
+  - GeneralFord-Exit-10
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

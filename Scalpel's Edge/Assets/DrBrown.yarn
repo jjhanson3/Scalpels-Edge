@@ -1,0 +1,55 @@
+title: Start
+tags: 
+colorID: 0
+position: 612,-633
+---
+Dr.Brown: Hello, Doctor. Need anything?
+[[I need to know more about my patients’ health.|Charts]]
+[[What supplies can I expect to have?|Supplies]]
+[[See you later. (Exit Dialogue)|Exit]]
+===
+title: Charts
+tags: 
+colorID: 0
+position: 732,-853
+---
+Dr.Brown: Of course. Each occupied patient bed should have a clipboard next to it, containing a medical chart for the patient. Though personally, I would suggest talking to the patient themselves to get the full story. There are some things a piece of paper just can’t tell you.
+[[I have another question.|StartAgain]]
+[[Thanks.(Exit Dialogue)|Exit]]
+===
+title: Supplies
+tags: 
+colorID: 0
+position: 952,-854
+---
+Dr.Brown: You can find the supply closet in the center of the hospital. It’s got entrances from multiple directions, you can’t miss it. It’s been a few days since we got a fresh shipment, so at the moment we’ve got access to bandages, antibiotics and burn cream. It’s not much, but it should be enough for basic types of wounds, infections, and burns.
+[[Any idea when we'll get a new shipment?|Shipment]]
+[[See you later(Exit Dialogue)|Exit]]
+===
+title: Exit
+tags: 
+colorID: 0
+position: 1172,-853
+---
+<<wait 1>>
+===
+title: StartAgain
+tags: 
+colorID: 0
+position: 852,-1073
+---
+Dr.Brown: Shoot.
+[[I need to know more about my patients’ health.|Charts]]
+[[What supplies can I expect to have?|Supplies]]
+[[Any idea when we'll get a new shipment?|Shipment]]
+[[See you later. (Exit Dialogue)|Exit]]
+===
+title: Shipment
+tags: 
+colorID: 0
+position: 1072,-1073
+---
+Dr.Brown: It’s hard to say. We usually get one every few days, but there’s little consistency to it. We usually get the shipments in the early morning, but otherwise I’m afraid I can’t help much in this regard.
+[[I have another question.|StartAgain]]
+[[Thanks for the help.(Exit Dialogue)|Exit]]
+===
