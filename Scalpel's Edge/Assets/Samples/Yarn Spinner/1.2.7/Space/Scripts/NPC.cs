@@ -106,10 +106,10 @@ namespace Yarn.Unity.Example {
                     if (selectionRenderer != null) {
                         if (distanceToPlayer.magnitude <= speakingRange) {
                             hudActionManager.updatePlayerAction("Talk");
-                            if (Input.GetKeyDown("t"))
-                            {
+                            if (Input.GetKeyDown("t")&&hit.transform.gameObject == gameObject)
+                            {   Debug.Log(selection);
                                 //PickUp();
-                                Debug.Log("check 2");
+                                //Debug.Log("check 2");
                                 if(multiScript&&woundArea.GetComponentInChildren<Wound>()==null) {
                                 //GameObject p = transform.root.gameObject;
                                     
