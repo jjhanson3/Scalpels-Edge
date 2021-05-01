@@ -21,7 +21,7 @@ colorID: 0
 position: 920,-402
 ---
 Chris: He thinks that we’re all lost children, that the unit can’t function without his experience. He feels responsible. It’s a shame he expresses it like an ass...
-
+<<wait 2>>
 Still, he didn’t deserve such incompetent orders. I mean, Command ordering soldiers to jump from a helicopter without a parachute? What got into them?
 [[Tell me about your injury.|Injury]]
 [[I'll talk to you later.(Exit Dialogue)|Exit]]
