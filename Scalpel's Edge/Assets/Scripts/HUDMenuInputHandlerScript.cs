@@ -11,6 +11,7 @@ public class HUDMenuInputHandlerScript : MonoBehaviour
 
     private HUDActionManager hudActionManager;
     private string actionInfo = "";
+    private string actionItem = "";
     private string popUpInfo;
 
     private TMPro.TextMeshProUGUI textMesh;
@@ -32,6 +33,7 @@ public class HUDMenuInputHandlerScript : MonoBehaviour
     {
         //Check for each potential button press that would make a menu
         actionInfo = hudActionManager.getPlayerAction();
+        actionItem = hudActionManager.getItem();
 
         //P for patients, the "master chart"
         if (Input.GetKeyDown("p")) {
@@ -45,7 +47,7 @@ public class HUDMenuInputHandlerScript : MonoBehaviour
             popUpInfo = actionPopUp.GetComponent<actionPopUpScript>().defaultText;
             if (actionInfo == "Pickup")
             { //Display "[E] Pickup"
-                popUpInfo = popUpInfo.Replace("<Instruction>", "[E] Pickup");
+                popUpInfo = popUpInfo.Replace("<Instruction>", "[E] Pickup " + actionItem);
                 textMesh.SetText(popUpInfo);
                 print("It is pick up time player");
             }

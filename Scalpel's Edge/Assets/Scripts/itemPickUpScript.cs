@@ -60,6 +60,7 @@ public class itemPickUpScript : MonoBehaviour
                 if (distanceToPlayer.magnitude <= pickUpRange)
                 {
                     hudActionManager.updatePlayerAction("Pickup");
+                    hudActionManager.updatePickUpItem(selection.tag);
                 }
                 if (Input.GetKeyDown("e") && !equipped && distanceToPlayer.magnitude <= pickUpRange && !slotFull)
                 {
@@ -90,6 +91,7 @@ public class itemPickUpScript : MonoBehaviour
                 }
             } else
             {
+
                 hudActionManager.clearPlayerAction("Pickup");
             }
         }

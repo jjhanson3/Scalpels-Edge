@@ -5,6 +5,7 @@ using UnityEngine;
 public class HUDActionManager : MonoBehaviour
 {
     private string actionInfo = "";
+    private string item = "";
 
     // Displays what control the player needs to press to do the corresponding action
     public void updatePlayerAction (string possibleAction)
@@ -12,9 +13,16 @@ public class HUDActionManager : MonoBehaviour
         if (actionInfo == "")
         {
             actionInfo = possibleAction;
-            print("Set action info");
         }
         
+    }
+
+    public void updatePickUpItem (string newItem)
+    {
+        if (item == "")
+        {
+            item = newItem;
+        }
     }
 
     // Sets actionInfo to "" if the key matches actionInfo. Ensures that actionInfo is only cleared if it is called from the correct location
@@ -25,12 +33,17 @@ public class HUDActionManager : MonoBehaviour
         if(actionKey == actionInfo)
         {
             actionInfo = "";
-            print("set actionInfo to nothing");
+            item = "";
         }
     }
 
     public string getPlayerAction ()
     {
         return actionInfo;
+    }
+
+    public string getItem ()
+    {
+        return item;
     }
 }
