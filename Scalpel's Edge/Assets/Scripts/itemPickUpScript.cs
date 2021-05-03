@@ -22,7 +22,7 @@ public class itemPickUpScript : MonoBehaviour
     public float dropForwardForce, dropUpwardForce;
 
     public bool equipped;
-    public static bool slotFull;
+    private bool slotFull = false;
 
     private HUDActionManager hudActionManager;
 
@@ -31,6 +31,12 @@ public class itemPickUpScript : MonoBehaviour
     //private string selectableTag = "Selectable";
 
     private Transform objTransform;
+
+
+    public bool getSlotStatus()
+    {
+        return slotFull;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +73,7 @@ public class itemPickUpScript : MonoBehaviour
                     print("Item has been picked up");
                     equipped = true;
                     slotFull = true;
+                    hudActionManager.updateSlotStatus(true);
                     objTransform = selection;
                     //HandContainer.position = HandContainer.position + Vector3.down * 0.5f;
                     //print(HandContainer.position);
@@ -101,6 +108,7 @@ public class itemPickUpScript : MonoBehaviour
             print("Item has been dropped");
             equipped = false;
             slotFull = false;
+            hudActionManager.updateSlotStatus(false);
 
             //Set parent to null
             objTransform.parent = null;

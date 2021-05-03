@@ -122,7 +122,9 @@ namespace Yarn.Unity.Example {
                                     dialogueRunner.Add(scriptToLoad);
                                 }
                                 dialogueRunner.StartDialogue(talkToNode);
-                                if(oneTime) {
+                                //TODO: Uncomment line below once we can unlock the popuplock when the dialogue is done
+                                //hudActionManager.setLock(true);
+                                if (oneTime) {
                                     setInactive();
                                 }
                                 if(dialogueRunner.yarnScripts.Length!=0) {
