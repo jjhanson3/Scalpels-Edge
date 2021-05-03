@@ -125,7 +125,10 @@ namespace Yarn.Unity.Example {
                                 if(oneTime) {
                                     setInactive();
                                 }
-                                dialogueRunner.Clear();
+                                if(dialogueRunner.yarnScripts.Length!=0) {
+                                    dialogueRunner.Clear();
+                                }
+                                
                                 
                             }
                         } 
