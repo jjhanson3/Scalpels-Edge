@@ -47,7 +47,20 @@ public class HUDMenuInputHandlerScript : MonoBehaviour
             popUpInfo = actionPopUp.GetComponent<actionPopUpScript>().defaultText;
             if (actionInfo == "Pickup")
             { //Display "[E] Pickup"
-                popUpInfo = popUpInfo.Replace("<Instruction>", "[E] Pickup " + actionItem);
+                string tempItem = "";
+                switch (actionItem)
+                {
+                    case "Burn Creams":
+                        tempItem = "Burn Cream";
+                        break;
+                    case "Bandages":
+                        tempItem = "Bandage";
+                        break;
+                    default:
+                        tempItem = actionItem;
+                        break;
+                }
+                popUpInfo = popUpInfo.Replace("<Instruction>", "[E] Pickup " + tempItem);
                 textMesh.SetText(popUpInfo);
                 print("It is pick up time player");
             }
