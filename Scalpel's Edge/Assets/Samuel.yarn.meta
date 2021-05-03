@@ -15,13 +15,17 @@ ScriptedImporter:
   - Samuel-Start-2
   - Samuel-Story-3
   - Samuel-Story-4
-  - Samuel-Wound-5
+  - Samuel-Story-5
   - Samuel-Wound-6
   - Samuel-Wound-7
   - Samuel-Wound-8
-  - Samuel-Admonishment-9
+  - Samuel-Wound-9
   - Samuel-Admonishment-10
   - Samuel-Admonishment-11
+  - Samuel-Admonishment-12
+  - Samuel-Acknowledgement-13
+  - Samuel-Acknowledgement-14
+  - Samuel-Acknowledgement-15
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
