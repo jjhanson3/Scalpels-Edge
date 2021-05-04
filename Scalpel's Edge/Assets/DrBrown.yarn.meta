@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-US
+  baseLanguageID: 
   stringIDs:
   - DrBrown-Start-0
   - DrBrown-Start-1
@@ -24,13 +24,11 @@ ScriptedImporter:
   - DrBrown-StartAgain-11
   - DrBrown-StartAgain-12
   - DrBrown-StartAgain-13
-  - DrBrown-StartAgain-14
+  - DrBrown-Shipment-14
   - DrBrown-Shipment-15
   - DrBrown-Shipment-16
-  - DrBrown-Shipment-17
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: 32feffbe8a6813e47a3a9b75bf7b64e2,
-    type: 3}
+  baseLanguage: {instanceID: 0}
   localizations: []
